@@ -74,11 +74,13 @@ h1{
 	font-size: 7em;
 	margin-bottom: 0;
 	font-family: 'Butler Light', serif;
+	text-align: left;
 }
 
 h2{
 	font-size: 3em;
 	margin-top: 0%;
+	text-align: right;
 	color: #21177D;
 	font-family: 'Gilroy Bold Italic', serif;
 }
@@ -96,11 +98,11 @@ span{
 .main_text{
 	width: 60%;
 	margin-top: 5em;
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
+	text-align: left;
 	line-height: 120%;
 	font-size: 1.2em;
+	font-family: 'Butler Regular', serif;
+
 /*	text-align: right;
 	width: 30%;
 	float: right;
@@ -108,12 +110,9 @@ span{
 }
 
 .bouton{
-	width: 1000px;
 	font-family: 'Gilroy Bold', sans-serif;
 	font-weight: 700;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto; 
+	text-align: right; 
 	margin-top: 8%;
 }
 
@@ -152,21 +151,28 @@ width: 90%;
 	width:75%;
 }
 
-.team{
-	max-width: 20%;
+.bulle{
+	float: left;
+	width: 10em;
+	margin-top: -0.5em;
+	margin-left: none;
+	padding: 0.2em;
 }
+
 
 footer{
 	position:absolute;
 	bottom:0;
 	width:100%;
-	padding-top:50px;
+	margin-bottom: 1%;
 	height:50px;
 }
 
 footer a {
-	font-family: 'Butler_Regular', serif;
-	color: #21177D;
+	font-family: 'Gilroy Medium', serif;
+	font-size: 1em;
+	color: #000;
+	padding: 0.2em;
 }
 
 footer a:hover {
