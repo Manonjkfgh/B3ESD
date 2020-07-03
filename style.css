@@ -113,9 +113,12 @@ span{
 	font-family: 'Gilroy Bold', sans-serif;
 	font-weight: 700;
 	text-align: right; 
-	margin-top: 8%;
+	margin-top: 6em;
 }
 
+.snd{
+	margin-top: 0.5em;
+}
 .bouton a{
 	margin-left: 5%;
 	font-size: 20px;
@@ -193,16 +196,17 @@ footer a:hover {
 
 
 /* ON PASSE AU MOBILE */ 
-@media screen and (max-width: 600px)
+@media screen and (min-device-width : 375px)
+and (max-device-width : 812px) 
 {
 
 
 h1{  
-	font-size: 6em;
+	font-size: 9em;
 }
 
 h2{
-	font-size: 3em;
+	font-size: 4em;
 }
 
 span{
@@ -216,33 +220,39 @@ span{
 	margin-top: 3em;
 	text-align: left;
 	line-height: 120%;
-	font-size: 1.2em;
+	font-size: 2em;
 }
 
 .bouton{
-	margin-top: 6em;
+	margin-top: 8em;
+}
+
+.snd{
+	margin-top: 2em;
 }
 
 .bouton a{
 	margin-left: 5%;
-	font-size: 1.2em;
-	margin-bottom: 4em;
+	font-size: 2.5em;
+	margin-top: 2em;
+	margin-bottom: 2%;
+	padding: 10 0 0 10;
 }
 
 .clignote{
 	width: .03em;
-	height: 1.2em;
+	height: 3em;
 	padding: .1em;
 }
 
 footer{
 	width:80%;
 	margin-bottom: 3em;
-	height:2em;
+	height:8em;
 }
 
 footer a {
-	font-size: 1em;
+	font-size: 2em;
 	color: red;
 	padding: 0.1em;
 }
