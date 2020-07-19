@@ -13,26 +13,28 @@ src: local('Butler Light'), url('Butler_Light.woff') format('woff');
 }
 
 @font-face {
-font-family: "Gilroy Bold";
+font-family: 'Gilroy-Bold ☞';
 font-style: normal;
 font-weight: normal;
-src: local('Gilroy-Bold'), url('/fonts/Gilroy-Pour_Manon_la_pauvre_ca_marche_pas_chez_elle/Gilroy-Bold.ttf') format('ttf');
+src: local('Gilroy-Bold ☞'), url('fonts/Gilroy-Bold.woff') format('woff');
 }
+
 
 @font-face {
-font-family: "Gilroy Medium";
+font-family: 'Gilroy-Heavy ☞';
 font-style: normal;
 font-weight: normal;
-src: local('Gilroy-Medium'), url('/fonts/Gilroy-Pour_Manon_la_pauvre_ca_marche_pas_chez_elle/Gilroy-Medium.ttf') format('ttf');
+src: local('Gilroy-Heavy ☞'), url('fonts/Gilroy-Heavy.woff') format('woff');
 }
+
+
 
 @font-face {
-font-family: "Gilroy Bold Italic";
+font-family: 'Gilroy-Medium ☞';
 font-style: normal;
 font-weight: normal;
-src: local('Gilroy-BoldItalic'), url('/fonts/Gilroy-Pour_Manon_la_pauvre_ca_marche_pas_chez_elle/Gilroy-BoldItalic.ttf') format('ttf');
+src: local('Gilroy-Medium ☞'), url('fonts/Gilroy-Medium.woff') format('woff');
 }
-
 
 
 
@@ -46,7 +48,7 @@ body{
 	background: #FAF5E4;
 	max-height: 1024px;
 	width: auto;
-	font-family: 'Gilroy Medium', sans-serif;
+	font-family: 'Gilroy-Bold ☞',Arial,sans-serif;
 	margin-left: 5%;
 	margin-right: 5%;
 }
@@ -73,16 +75,18 @@ a{
 h1{  
 	font-size: 7em;
 	margin-bottom: 0;
+	padding-top: 0.5em;
 	font-family: 'Butler Light', serif;
 	text-align: left;
 }
 
 h2{
 	font-size: 3em;
-	margin-top: 0%;
+	margin-top: 1.5em;
+	margin-bottom: 0;
 	text-align: right;
 	color: #21177D;
-	font-family: 'Gilroy Bold Italic', serif;
+	font-family: 'Gilroy-Bold ☞', serif;
 }
 
 span{
@@ -90,18 +94,34 @@ span{
 	font-family: 'Butler Light', serif;
 }
 
+button{
+	width: 15em;
+	height: 3em;
+	border-radius: 10px;
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-top: 6em;
+}
 
 .container{
 	width: 100%;
 }
 
+.hi h2{
+	margin-top: 0em!important;
+}
+.hi h1{
+	margin-top: 0em!important;
+}
+
 .main_text{
 	width: 60%;
-	margin-top: 5em;
+	margin-top: 3em;
 	text-align: left;
 	line-height: 120%;
 	font-size: 1.2em;
 	font-family: 'Butler Regular', serif;
+	line-height: 1.4em;
 
 /*	text-align: right;
 	width: 30%;
@@ -110,15 +130,22 @@ span{
 }
 
 .bouton{
-	font-family: 'Gilroy Bold', sans-serif;
+	font-family: 'Gilroy-Bold ☞', Arial, sans-serif;
 	font-weight: 700;
 	text-align: right; 
-	margin-top: 6em;
+	margin-top: 5em;
 }
 
 .snd{
 	margin-top: 0.5em;
 }
+
+.bouton div{
+	font-size: 20px;
+	text-decoration:none;
+	color: #21177D; 
+}
+
 .bouton a{
 	margin-left: 5%;
 	font-size: 20px;
@@ -166,61 +193,88 @@ span{
 	float: right;
 }
 
+
 @keyframes clignoter {
   0%   { opacity:1; }
   40%   {opacity:0; }
   100% { opacity:1; }
 }
 
+.transition{
+	animation-duration: 1s;
+	animation-name: transition;
+	transition: none;
+	transition: none;
+	float: right;
+}
+
+@keyframes transition {
+  0%   { opacity:0; }
+  50% {opacity: 0.8}
+  100% { opacity:1; }
+}
+
 footer{
-	position:absolute;
+	position:fixed;
 	bottom:0;
 	width:100%;
 	margin-bottom: 1%;
 	height:50px;
+	color: rgba(0, 0, 0, 0.2);
 }
 
 footer a {
-	font-family: 'Gilroy Medium', serif;
-	font-size: 1em;
-	color: #000;
-	padding: 0.2em;
+	font-family: 'Gilroy-Medium ☞', serif;
+	font-size: 0.8em;
+	padding: 0.5em;
+	color: rgba(0, 0, 0, 0.2);
+
 }
 
 footer a:hover {
-	opacity: 0.5;
+	color: #000;
 }
 
 
+.entry{
+	width: 60%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
 
 
 
 /* ON PASSE AU MOBILE */ 
 @media screen and (min-device-width : 375px)
-and (max-device-width : 812px) 
+and (max-device-width : 900px) 
 {
 
+html{
+	overflow: scroll;
+}
 
 h1{  
 	font-size: 9em;
 }
 
 h2{
-	font-size: 4em;
+	font-size: 3.5em;
 }
 
 span{
 	font-size: 0.7em;
 	font-family: 'Butler Light', serif;
+	line-height: .5em;
 }
 
 
 .main_text{
-	width: 80%;
-	margin-top: 3em;
+	width: 90%;
+	margin-top: 2em;
 	text-align: left;
-	line-height: 120%;
-	font-size: 2em;
+	font-size: 3em;
+	line-height: 1.2em;
 }
 
 .bouton{
@@ -229,37 +283,60 @@ span{
 
 .snd{
 	margin-top: 2em;
+	margin-bottom: 5em;
 }
 
 .bouton a{
 	margin-left: 5%;
-	font-size: 2.5em;
+	font-size: 2.7em;
+	margin-top: 2em;
+	margin-bottom: 2%;
+	padding: 10 0 0 10;
+}
+
+.bouton div{
+	margin-left: 5%;
+	font-size: 2.7em;
 	margin-top: 2em;
 	margin-bottom: 2%;
 	padding: 10 0 0 10;
 }
 
 .clignote{
-	width: .03em;
-	height: 3em;
-	padding: .1em;
+/*	width: .03em;
+	height: 1em;
+	padding: .1em;*/
+	display: none;
 }
 
 footer{
-	width:80%;
-	margin-bottom: 3em;
+	width:90%;
+	line-height: 2.8em;
+	margin-top: 3em;
 	height:8em;
+	position: relative;
+	bottom: 0;
 }
 
 footer a {
 	font-size: 2em;
-	color: red;
 	padding: 0.1em;
 }
 
-
+.entry{
+	width: 70%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
 }
 
+.go{
+	width: 90%;
+	margin: auto;
+}
+
+
+}
 
 
 
